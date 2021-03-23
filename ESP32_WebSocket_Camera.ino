@@ -201,13 +201,13 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t payloa
 void initWifiStation() {
 
     WiFi.mode(WIFI_AP_STA);
-    WiFi.begin(ssid, password);    
+    WiFi.begin(ssid1, password1);
     Serial.print("\nConnecting to WiFi");
     while (WiFi.status() != WL_CONNECTED) {
        delay(5000);        
        Serial.print(".");
     }
-    Serial.println(String("\nConnected to the WiFi network (") + ssid + ")" );
+    Serial.println(String("\nConnected to the WiFi network (") + ssid1 + ")" );
 
     Serial.print("\nStation IP address: ");
     Serial.println(WiFi.localIP()); 
